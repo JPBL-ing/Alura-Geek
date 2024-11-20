@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos para compatibilidad y visualización -->
+    <meta charset="UTF-8"> <!-- Define el juego de caracteres para evitar problemas de codificación -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea adaptable en dispositivos móviles -->
+
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="styles/reset.css"> <!-- Estilo base para resetear configuraciones predeterminadas -->
+    <link rel="stylesheet" href="styles/style.css"> <!-- Estilos principales del sitio -->
+
+    <!-- Título de la página -->
+    <title>AluraGeek</title>
+</head>
+<body>
+    <!-- Encabezado del sitio web -->
+    <header class="header">
+        <!-- Logo de la marca -->
+        <img src="./assets/Logo.svg" alt="logo alurageek" />
+    </header>
+
+    <!-- Contenedor principal del contenido del sitio -->
+    <main class="main-contenedor">
+        <!-- Sección de productos existentes -->
+        <section>
+            <h1>Mis Productos:</h1>
+            <!-- Contenedor dinámico para listar productos -->
+            <div data-product class="productos-contenedor"></div>
+        </section>
+
+        <!-- Sección para agregar nuevos productos -->
+        <section>
+            <h1>Agregar Producto:</h1>
+
+            <!-- Formulario para ingresar datos de un nuevo producto -->
+            <form class="formulario-contenedor" data-form>
+                <!-- Campo para el nombre del producto -->
+                <input data-name placeholder="nombre..." type="text">
+                <!-- Campo para el precio del producto -->
+                <input data-price placeholder="precio..." type="text">
+                <!-- Campo para la URL de la imagen del producto -->
+                <input data-image placeholder="imagen..." type="text">
+                <!-- Mensaje de error para validaciones del formulario -->
+                <span data-mensage class="mensajeError"></span>
+                <div class="button-contenedor">
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="button-submit" id="button"> Enviar...</button>
+                    <!-- Botón para limpiar los campos del formulario -->
+                    <button type="reset" class="button-clear" id="button">Limpiar...</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página del sitio -->
+    <footer class="footer-contenedor">
+        <div>
+            <!-- Logo repetido en el pie de página -->
+            <img src="./assets/Logo.svg" />
+        </div>
+        <!-- Información de autoría -->
+        <p> Desarrollado por Juan Pablo</p>
+        <small>Alura Latam 2024</small>
+    </footer>
+
+    <!-- Archivo principal de JavaScript para manejar la lógica del sitio -->
+    <script type="module" src="js/controllers/main.js"></script>
+</body>
+</html>
